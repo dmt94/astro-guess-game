@@ -11,6 +11,7 @@
   width: 100%;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -185,9 +186,15 @@ p {
 
 .sign-symbols:hover ~ .letter-k {
   transition: all ease 3s;
-  font-size: 30px;
-  color:rgba(255, 255, 255, 0.788);
-  font-weight:700;
+  color:rgba(0, 0, 0, 0.788);
+  font-weight: 900;
+}
+
+.link-sln {
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 
@@ -383,6 +390,10 @@ img.sparkle {
   text-align: left;
 }
 
+.category {
+  font-weight: 800;
+}
+
 .modal-title {
   font-family: 'Montserrat Subrayada';
   padding: 10px;
@@ -460,3 +471,43 @@ img.sparkle {
 }
 
 .button:focus { outline:0; }
+
+/* Win */
+
+.img-taurus-win {
+  width: 350px;
+  margin: 20px;
+}
+
+.win-title {
+  color: black;
+}
+
+.win-date, .taurus-dates {
+  color: rgb(49, 49, 49);
+}
+
+.taurus-win-aura {
+  margin: 10px;
+  width: 100%;
+}
+
+
+.the-header > .win-title-div {
+  border: 1px solid rgba(103, 132, 87, 0.273);
+}
+
+/* Lose */
+
+.lose-title, .heading-title > p, .buffer > .the-winner {
+  color: rgb(255, 242, 242);
+}
+
+.the-header > .lose-title-div {
+  border: 1px solid rgba(33, 33, 33, 0.273);
+  background-color: rgba(0, 0, 0, 0.407);
+}
+
+.go-back {
+  margin: 20px;
+}
