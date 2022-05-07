@@ -1,0 +1,473 @@
+
+/* Utility */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* background: url('/images/taurus.png') no-repeat center fixed;
+  background-size: cover; */
+  /* background-color: black; */
+}
+
+.the-header {
+  background: url('/images/taurus.png') no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.the-header .title-div {
+  content: '';
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  background: rgba(204, 185, 206, 0.627);
+  border:rgb(255, 249, 219) 1px solid;
+  box-shadow: rgba(176, 162, 255, 0.649) 0px 48px 100px 0px;
+}
+
+.heading-title {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-div {
+  padding-bottom: 50px;
+  margin: 30px;
+}
+
+/* Aura Buffer */
+
+.buffer {
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aura {
+  height: 120px;
+  width: 120px;
+  background-color: #ffe3f1;
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 1px 1px 37px #ffda46;
+  border: solid 1px rgb(255, 180, 94);
+  z-index: 1;
+  filter: blur(3px);
+  transition: 1.3s;
+}
+
+.aura:hover {
+  filter: blur(13px);
+  transition: filter 1s ease-in;
+  transition: background-color 1s ease-in;
+  cursor: crosshair;
+}
+
+.aries-aura:hover {
+  background-color: #ff9a6be1;
+}
+
+.taurus-aura:hover {
+  background-color: #ecff7eb8;
+}
+
+.gemini-aura:hover {
+  background-color: #a2fff6b8;
+}
+
+.cancer-aura:hover {
+  background-color: #7fd9ffb8;
+}
+
+.leo-aura:hover {
+  background-color: #fff646b8;
+}
+
+.virgo-aura:hover {
+  background-color: #eec98ab8;
+}
+
+.libra-aura:hover {
+  background-color: #ffb2dcb8;
+}
+
+.scorpio-aura:hover {
+  background-color: #9e42cc59;
+}
+
+.sag-aura:hover {
+  background-color: #ffbb00dc;
+}
+
+.cap-aura:hover {
+  background-color: #807e4179;
+}
+
+.aq-aura:hover {
+  background-color: #62f9cead;
+}
+
+.pisces-aura:hover {
+  background-color: #a8c5ffd8;
+}
+
+
+
+
+/* Font / Text */
+
+h1 {
+  z-index: 10;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  opacity: 0.9;
+  transition: opacity 0.9s ease-in-out;
+  color: rgb(255, 254, 250);
+}
+
+h1:hover {
+    /* Set the background color */
+
+}
+
+.buffer p {
+  position: absolute;
+  text-align: center;
+  font-size: 15px;
+  color:rgba(25, 25, 25, 0.759);
+  top: 170px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+}
+
+p {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  z-index: 2;
+}
+
+/* Structure */
+
+.rows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.signs {
+  padding: 20px;
+}
+
+/* sign images, other images */
+
+.sign-symbols {
+  width: 50px;
+  position: absolute;
+  z-index: 2;
+  opacity: 1.0;
+  filter: brightness(100%);
+  filter: sepia(0) saturate(2);
+
+  animation: filter-animation 5s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.sign-symbols:hover {
+  cursor: pointer;
+  transition: all ease 2s;
+}
+
+.sign-symbols:hover ~ .letter-k {
+  transition: all ease 3s;
+  font-size: 30px;
+  color:rgba(255, 255, 255, 0.788);
+  font-weight:700;
+}
+
+
+
+@keyframes filter-animation {
+  0% {
+    filter: sepia(1) saturate(2);
+    opacity: 1.0;
+    
+  }
+
+  20% {
+    filter: sepia(1) saturate(2);
+    opacity: 0.5;
+    
+  }
+
+
+  40% {
+    filter: sepia(1) saturate(2);
+    opacity: 0.7;
+    
+  }
+
+  50% {
+    filter: sepia(1) saturate(2);
+    opacity: 0.9;
+    
+  }
+
+  100% {
+    filter: sepia(1) saturate(1);
+    opacity: 1.0;
+    
+  }
+}
+
+
+.img-sun {
+  width: 100px;
+  margin: 20px;
+  filter: sepia(2) saturate(2);
+  filter: brightness(380%);
+  opacity: 0.8;
+  animation: sun-animation 3s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes sun-animation {
+  0% {
+    filter: sepia(1) saturate(2);
+    filter: brightness(100%);
+    opacity: 1.0;
+    
+  }
+
+  20% {
+    filter: sepia(1) saturate(2);
+    brightness: 200%;
+    opacity: 0.5;
+  }
+
+
+  40% {
+    filter: sepia(1) saturate(2);
+    brightness: 270%;
+    opacity: 0.7;
+  }
+
+  50% {
+    filter: sepia(1) saturate(2);
+    opacity: 0.9;
+  }
+
+  100% {
+    filter: sepia(2) saturate(3);
+    opacity: 1.0;
+  }
+}
+
+/* Animation - glitter */
+
+#app {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+img.sparkle {
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  z-index: 20;
+  top: 20px;
+  filter: invert(100%) sepia(97%) saturate(11%) hue-rotate(207deg) brightness(104%) contrast(106%);
+
+  animation: glitter 2s linear 0s infinite normal;
+  -webkit-animation: glitter 2s linear 0s infinite normal;
+  -moz-animation: glitter 2s linear 0s infinite normal;
+  -ms-animation: glitter 2s linear 0s infinite normal;
+  -o-animation: glitter 2s linear 0s infinite normal;
+}
+
+@keyframes glitter {
+  0% {
+    -webkit-transform: scale(1.0);
+    opacity: 1;
+  }
+  25% {
+    -webkit-transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(1.0);
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 1;
+  }
+}
+
+.aura:hover ~ img.sparkle-2 {
+  /* transform: translate(40px, 70px); */
+  top: 150px;
+  width: 20px;
+  height: 20px;
+  animation: glitter2 2s linear 0s infinite normal;
+  -webkit-animation: glitter2 2s linear 0s infinite normal;
+  -moz-animation: glitter2 1s linear 0s infinite normal;
+  -ms-animation: glitter2 1s linear 0s infinite normal;
+  -o-animation: glitter2 2s linear 0s infinite normal;
+}
+
+@keyframes glitter2 {
+  0% {
+    -webkit-transform: scale(2.0);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: scale(1.5);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2.0);
+    opacity: 0;
+  }
+}
+
+/* Modal */ 
+
+.modal {
+  opacity: 0.85;
+}
+
+.modal-dialog {
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffcf1;
+  
+}
+
+.sign-desc {
+  border-bottom: 1px solid black;
+}
+
+.sign-desc > h2 {
+  font-family: 'Montserrat Subrayada';
+  padding-top: 10px;
+  
+}
+
+.sign-desc > p {
+  color: black;
+  text-align: left;
+}
+
+.modal-title {
+  font-family: 'Montserrat Subrayada';
+  padding: 10px;
+}
+
+.sparkle-3 {
+  width: 50px;
+}
+
+.close-btn {
+  background-color: rgb(255, 208, 113);
+  color: black;
+}
+
+.close-btn:hover {
+  background-color: rgb(255, 160, 113);
+  outline: none;
+  color: black;
+}
+
+.btn-desc {
+  background-color: rgba(204, 196, 175, 0.805);
+  outline: 2px solid white;
+  border: none;
+  color: rgb(56, 56, 56);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+
+}
+
+
+.button {
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: 4px;
+  position: relative;
+  background-color: #ffee9a56;
+  border: white solid 1px;
+  color: rgb(91, 91, 91);
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  box-shadow: 0 5px 15px #eeffb879;
+  border-radius: 4px;
+  
+}
+
+.button:hover {
+  background: #fff;
+  box-shadow: 0px 2px 10px 5px #fed582;
+  color: #000;
+}
+
+.button:after {
+  content: "";
+  background: #ffd333;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.button:focus { outline:0; }
